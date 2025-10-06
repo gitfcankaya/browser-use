@@ -35,7 +35,11 @@ cd browser-use/examples/apps/amazon-asin-scraper
 
 2. Gerekli bağımlılıkları yükleyin:
 ```bash
-uv pip install gradio
+# Önce browser-use'u yükleyin
+pip install -e ../../..
+
+# Sonra bu uygulama için gerekli paketleri yükleyin
+pip install -r requirements.txt
 ```
 
 3. `.env` dosyası oluşturun ve OpenAI API anahtarınızı ekleyin:
@@ -80,23 +84,25 @@ B08N5WRWNW, B09G9FPHY6, B0C1H26C46
 
 ### Tek Ürün İçin
 
+Tam örnek için `example_output.json` dosyasına bakın.
+
 ```json
 {
   "asin": "B08N5WRWNW",
-  "title": "Sony PlayStation 5...",
-  "price": "€499.99",
-  "rating": "4.5 out of 5 stars",
-  "reviews_count": "12,543",
+  "title": "Sony PlayStation 5 Console",
+  "price": "€549.99",
+  "rating": "4.6 out of 5 stars",
+  "reviews_count": "15,234",
   "availability": "In Stock",
   "brand": "Sony",
-  "description": "Experience lightning-fast loading...",
+  "description": "The PS5 console unleashes new gaming possibilities...",
   "features": [
-    "Ultra-high speed SSD",
-    "Stunning games",
-    "4K-TV gaming"
+    "Lightning Speed - Harness the power of a custom CPU...",
+    "Stunning Games - Marvel at incredible graphics...",
+    "Breathtaking Immersion - Discover a deeper gaming experience..."
   ],
   "images": [
-    "https://m.media-amazon.com/images/I/..."
+    "https://m.media-amazon.com/images/I/51DYF+qWpfL._AC_SL1500_.jpg"
   ],
   "url": "https://www.amazon.de/dp/B08N5WRWNW"
 }
